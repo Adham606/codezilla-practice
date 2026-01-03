@@ -10,7 +10,7 @@ body {
 }
 
 html {
-    font-size: 16;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -27,13 +27,96 @@ ul,ol {
     --main-color: #3a6cf4;
 }
 
-/* land-page */
+/*start land-page */
 .land-page {
-    background-image: url(images/background.jpeg);
+    width: 100%;
+    height: calc(100vh - 0.625rem);
+    background-image: url(images/background.jpeg);  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100vh;
 }
-/* land-page */
+
+header {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 0.625rem 12.5rem;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav, 
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    gap: 30px;
+}
+
+header .logo {
+    font-size: 1.8em;
+    color: var(--main-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ul li a {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+ul li a:hover {
+    color: #601cfc;
+}
+
+.land-page h2{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.land-page span {
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+}
+/*end land-page */
+
+/* reoponsive */
+
+/* mobile */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    header ul li a {
+        font-size: 1em;
+    }
+
+    header ul {
+        gap: 10px;
+    }
+}
+
+/* taplat */
+@media (max-width: 1024px) {
+    header {
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* laptop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
+
+/* desktop */
+@media (min-width: 1441px) {
+}
